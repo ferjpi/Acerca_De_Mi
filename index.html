@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Acerca De Mi</title>
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      font-family: monospace;
+    }
+    .profile {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 3px solid yellow;
+      box-shadow: 0 3px 7px yellowgreen;
+    }
+    .content-about-me {
+      width: 60%;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    .btn {
+      background: yellow;
+      box-shadow: 0px 0px 0px rgba(0,0,0,0);
+      border-radius: 5px;
+      color: black;
+      font-size: 1.1rem;
+      font-weight: bold;
+      width: 100px;
+      height: 40px;
+      transition: scale .5s;
+      outline: 0;
+    }
+    .btn:hover {
+      animation: hover .5s ease-in-out forwards;
+    }
+
+    .footer {
+      display: inherit;
+      justify-content: center;
+      align-items: baseline;
+      margin-top: 40px;
+    }
+    .link {
+      margin: 0px 20px;
+    }
+    .link i {
+      color: #551A8B;
+    }
+    .link i:hover {
+      animation: link .2s ease-in-out forwards;
+    }
+
+    @keyframes link {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes hover {
+      from {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px rgba(0,0,0,0);
+      }
+      to {
+        box-shadow: 0px 3px 7px rgba(0,0,0,.2);
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ACERCA DE MI</h1>
+  <div class="img">
+    <img class="profile" src="./profile.JPG" alt="perfil">
+  </div>
+  <br />
+  <div class="content-about-me">
+    <p>
+      Hola, mi nombre es Fernando Pineda. Tengo 27 años. Soy de Colombia.
+    </p>
+    <p>
+      Me gradúe como Ingeniero de Minas en el año 2015. He desempeñado cargo como ingeniero de operaciones, pero lo que realmente me apasiona es la programación.
+    </p>
+    <p>
+      Actualmente realizo cursos y practico todos los días para ser un desarrollador Frontend porque es algo que me gusta.
+    </p>
+    <p>
+      En mis ratos libres me gusta salir a trotar o simplemente caminar. También me gusta ver series y películas. Soy mas del tema sobrenatural o que tenga buen sentido del humor.
+    </p>
+    <p>
+      Por lo pronto es lo que te puedo contar de mi.
+      Si quieres conocerme ó simplemente pasar a echar un vistazo a mis redes sociales (por lo general no publico mucho).
+    </p>
+    <br/>
+    <br/>
+
+    <!-- boton saludando -->
+    <button id="js-btn" class="btn">Saluda</button>
+  </div>
+
+  <div class="footer">
+    <a href="https://www.instagram.com/fernandojpineda/" target="blank" class="link"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://twitter.com/fernandojpineda/" target="blank" class="link"><i class="fab fa-twitter fa-2x"></i></a>
+  </div>
+
+  <script>
+    const handleClick = () => {
+      alert('Hola! Mi nombre es Fernando \u{1F919}')
+    }
+
+    const btn = document.querySelector('#js-btn')
+    btn.addEventListener('click', handleClick)
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "acerca_de_mi",
+  "version": "1.0.0",
+  "description": "Task",
+  "main": "index.js",
+  "author": "fejpi",
+  "license": "MIT"
+}
